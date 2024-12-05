@@ -1,0 +1,50 @@
+CREATE TABLE books(
+	BookID INT PRIMARY KEY,
+	NameofbooksVARCHAR(40),
+	Author VARCHAR(40),
+	Quantity INT,
+	Category VARCHAR(20),
+	Publication VARCHAR(40),
+	Price DECIMAL(7,2)
+);
+
+INSERT INTO books 
+VALUES
+	(1, 'ProblemsInGenralPHYSICS','I E Irodov',5,'educational','Arihant Publications',83.00),                                             
+	(2, 'Principles of Physics ','RobertResnick DavidHalliday',5,'educational','Wiley',805.00),                         
+	(3, 'H2O:A Biography of Water','Philip Ball',5,'educational','Phoenixs',719.00),                                            
+	(4, 'Infinite Powers','Steven Strogatz',5,'educational','Atlantic Books',1500.00),                                    
+	(5, 'The Origin of Species','Charles Darwin',5,'educational','Fingerprint',150.00),                             
+	(6, 'The Theory of Everything','Stephen Hawking',5,'educational','Jaico Publishing House', 122.00),                                                                                                                                                                                          
+	(7, 'Treasure Island','Robert Louis Stevenson',5,'adventure','Fingerprint',132),                                
+	(8, 'Moby Dick','Herman Melville',5,'adventure','Amazon Digital Servicest',949),                        
+	(9, 'Harry Potter and the Prisoner of Azkaban','J.K. Rowling',5,'adventure','Bloomsbury Childrens Books',316),                          
+	(10, 'Gullivers Travels ','Jonathan Swift',5,'adventure','Penguin Classics',197),                                                                                                                                                                                        
+	(11, 'The Lord of the Rings ','J. R. R. Tolkien',5,'fantasy','Mariner Books',699),                                                                  
+	(12, 'Chronicles of Narnia ','C.S. Lewis ',5,'fantasy','UK Childrens',1215),                                
+	(13, 'Dark Tower I: The Gunslinger ','Stephen King',5,'fantasy',' Hodder& Stoughton',800),                                                                                                                                               
+	(14, 'It: A Novel','Stephen King',5,'horror','Scribners',1645),                                                             
+	(15, 'The Exorcist','William Peter Blatty',5,'horror','Harper',1717),                                     
+	(16, 'Frankenstein','Mary Shelley',5,'horror','Harper',270),                                                                                                                                                                                                                                                               
+	(17, 'The Phantom ','Lee Falk',5,'comic','Regal Publishers',200),                                                          
+	(18, 'X-Men: Dark Phoenix Saga','Chris Claremont',5,'comic','Marvel',30),                                                  
+	(19, 'Amazing Spider-Man ','Stan Lee',5,'comic','Marvel',40),                                                       
+	(20, 'THE DARK KNIGHT RETURNS','Frank miller',5,'comic','RHUS',5520),                                                                  
+	(21, 'Crisis On Infinite Earths',' Marv Wolfman',5,'comic','DC comics',2000);               
+
+CREATE TABLE bookissue(
+	StudentnameVARCHAR(40),
+	BookID INT,
+	BooktypeVARCHAR(40),
+	DateofISSUE DATE,
+	Rollno INT);
+
+CREATE TABLE bookreturn(
+	StudentnameVARCHAR(40),
+	BookID INT,
+	BooktypeVARCHAR(40),
+	DateofRETURN DATE,
+	Rollno INT);
+SELECT * FROM books;
+SELECT * FROM bookissue;
+SELECT * FROM bookreturn;
